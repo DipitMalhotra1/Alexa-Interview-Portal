@@ -1,28 +1,23 @@
 {
-	"intents": [
-		{
-			"intent": "Interview",
-			"slots": [
-				{
-					"name": "Candidates",
-					"type": "LIST_OF_CANDIDATES"
-				}
-			]
-		},
-		{
-			"intent": "AMAZON.YesIntent"
-		},
-		{
-			"intent": "AMAZON.NoIntent"
-		},
-		{
-			"intent": "AMAZON.HelpIntent"
-		},
-		{
-			"intent": "AMAZON.StopIntent"
-		},
-		{
-			"intent": "AMAZON.CancelIntent"
-		}
-	]
+  "intents": [
+    {
+      "intent": "Interview",
+      "slots": [
+        {
+          "name": "Candidates",
+          "type": "LIST_OF_CANDIDATES"
+        }
+      ]
+    },
+
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
 }

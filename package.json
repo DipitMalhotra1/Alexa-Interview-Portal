@@ -1,0 +1,21 @@
+{
+  "name": "Alexa Parrot",
+  "version": "0.0.1",
+  "description": "Candidate Interview Portal skill set",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "interview",
+    "candidate",
+    "status"
+  ],
+  "author": "Amazon.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.9"
+  }
+}
