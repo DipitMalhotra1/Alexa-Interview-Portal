@@ -1,0 +1,6 @@
+[{"candidate_id" : 0, "candidate_name" : "Harry", "candidate_testDate" : "Friday, June 9, 2017", "interview_status" : "Completed" },
+{ "candidate_id" : 1, "candidate_name" : "Max", "candidate_testDate" : "Wednesday, July 19, 2017", "interview_status" : "Incomplete" },
+{ "candidate_id" : 2, "candidate_name" : "Dave", "candidate_testDate" : "Tuesday, August 1, 2017", "interview_status" : "Pending" },
+{ "candidate_id" : 3, "candidate_name" : "David", "candidate_testDate" : "Sunday, December 10, 2017", "interview_status" : "Completed" },
+{"candidate_id" : 4, "candidate_name" : "Tommy", "candidate_testDate" : "Tuesday, January 10, 2017", "interview_status" : "Pending" },
+{"candidate_id" : 5, "candidate_name" : "Oliver", "candidate_testDate" : "Saturday, March 11, 2017", "interview_status" : "Completed" }]

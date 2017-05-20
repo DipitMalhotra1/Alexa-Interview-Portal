@@ -16,6 +16,8 @@
   "author": "Amazon.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.9"
+    "alexa-sdk": "^1.0.9",
+    "mongodb": "^2.2.26",
+    "operations": "^0.1.2"
   }
 }
