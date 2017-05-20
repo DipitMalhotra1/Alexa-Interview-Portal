@@ -7,8 +7,8 @@ var fs = require('fs');
 AWS.config.update({
     region: "us-west-2",
     endpoint: "http://localhost:27017",
-    accessKeyId: 'AKIAJUR3IGTUEFSLM6LA',  // can omit access key and secret key
-    secretAccessKey: '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'
+    accessKeyId: '',  // can omit access key and secret key
+    secretAccessKey: ''
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
