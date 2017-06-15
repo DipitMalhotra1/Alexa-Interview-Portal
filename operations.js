@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-exports.insertDocument = function(db, document, collection, callback) {
+exports.insertDocument = function(db, document, collection) {
     // Get the documents collection
     var coll = db.collection(collection);
     // Insert some documents
@@ -8,11 +8,10 @@ exports.insertDocument = function(db, document, collection, callback) {
         assert.equal(err, null);
         console.log("Inserted " + result.result.n + " documents into the document collection "
             + collection);
-        callback(result);
     });
 };
 
-exports.findDocuments = function(db, collection, callback) {
+exports.findDocuments = function(db, collection,callback) {
     // Get the documents collection
     var coll = db.collection(collection);
 
@@ -23,24 +22,49 @@ exports.findDocuments = function(db, collection, callback) {
 };
 
 
-exports.findPending = function(db, collection, callback) {
+exports.findPendingCount = function(db, collection) {
     // Get the documents collection
     var coll = db.collection(collection);
 
-    coll.find({"interview_status":"Pending"}).toArray(function(err, docs) {
+    coll.find({"isFinished":"false"}).count()
+        .then(function(numItems) {
+        var count = numItems;
+        return count;
+    });
+};
+
+exports.findbyId= function(db,collection,id,callback) {
+    var coll = db.collection(collection);
+    coll.find({"_id": id}).toArray(function (err, docs) {
         assert.equal(err, null);
+        callback(docs)
+        return docs;
+
+    })
+}
+
+exports.findPending = function(db, collection,value,callback) {
+    // Get the documents collection
+    var coll = db.collection(collection);
+
+    coll.find({"isFinished":value}).toArray(function(err, docs) {
+        assert.equal(err, null);
+        console.log(docs);
         callback(docs);
     });
 };
 
 
-exports.findIncomplete = function(db, collection, callback) {
+
+
+
+exports.findPendingPositions = function(db, collection) {
     // Get the documents collection
     var coll = db.collection(collection);
 
-    coll.find({"interview_status":"Incomplete"}).toArray(function(err, docs) {
+    coll.find({},{"interviewName":1}).toArray(function(err, docs) {
         assert.equal(err, null);
-        callback(docs);
+        console.log(docs);
     });
 };
 
@@ -48,7 +72,7 @@ exports.findIncomplete = function(db, collection, callback) {
 
 exports.findCompleted= function(db,collection,callback){
     var coll = db.collection(collection);
-    coll.find({"interview_status":"Completed"}).toArray(function(err, docs) {
+    coll.find({"isFinished":"true"}).toArray(function(err, docs) {
         assert.equal(err, null);
         callback(docs);
     });
@@ -70,9 +94,9 @@ exports.removeDocument = function(db, document, collection, callback) {
 exports.updateDocument = function(db, document, update, collection, callback) {
 
     // Get the documents collection
-    var coll = db.collection(collection);
 
-    // Update document
+
+    var coll = db.collection(collection);
     coll.updateOne(document
         , { $set: update }, null, function(err, result) {
 
@@ -80,6 +104,9 @@ exports.updateDocument = function(db, document, update, collection, callback) {
             console.log("Updated the document with " + update);
             callback(result);
         });
-};/**
+};
+
+
+/**
  * Created by dipit on 4/19/17.
  */

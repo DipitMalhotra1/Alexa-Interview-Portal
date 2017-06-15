@@ -1,6 +1,0 @@
-Interview {Candidates}
-Interview Tell me about {Candidates} who finished the interview successfully.
-Interview Talk about {Candidates} who finished the interview successfully.
-AMAZON.HelpIntent Tell me those candidates name again
-AMAZON.HelpIntent Tell me the candidates name
-AMAZON.HelpIntent What are the candidates name again

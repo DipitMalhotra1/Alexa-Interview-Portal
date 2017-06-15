@@ -1,23 +1,18 @@
 {
-  "name": "Alexa Parrot",
-  "version": "0.0.1",
-  "description": "Candidate Interview Portal skill set",
-  "main": "index.js",
+  "name": "filtered",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "keywords": [
-    "alexa",
-    "skill",
-    "interview",
-    "candidate",
-    "status"
-  ],
-  "author": "Amazon.com",
-  "license": "Apache-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.9",
-    "mongodb": "^2.2.26",
-    "operations": "^0.1.2"
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "mongoose-gen": "^2.1.1",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
   }
 }
